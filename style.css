@@ -1,0 +1,80 @@
+* {
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	height: 5rem;
+	background-color: brown;
+	color: white;
+	font-size: 2rem;
+	padding-left: 1rem;
+	align-items: center;
+	user-select: none;
+}
+
+#box-envelopes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.envelope {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 12rem;
+	height: 6rem;
+	margin: 1rem;
+	background-image: url('assets/fechado.jpg');
+	background-size: 100% 100%;
+	cursor: pointer;
+	user-select: none;
+}
+
+.envelope:hover {
+	color: brown;
+}
+
+#resultado {
+	display: none;
+	position: absolute;
+	top: calc(50vh - 5rem);
+	left: 20vw;
+	border: 5px solid brown;
+	width: 60vw;
+	height: 10rem;
+	background-color: whitesmoke;
+	background-image: url('assets/paper-fibers.png');
+	font-size: 1.5rem;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 0px 500px #00000080;
+}
+
+#resultado b {
+	font-size: 2rem;
+}
+
+#resultado button {
+	margin-top: 1rem;
+	padding: .75rem 1.25rem;
+	background-color: brown;
+	border: none;
+	box-shadow: 1px 2px 5px 0px black;
+	border-radius: .25rem;
+	color: white;
+	cursor: pointer;
+}
+
+#resultado button:hover {
+	transform: scale(1.1, 1.1);
+	box-shadow: 2px 4px 5px 0px #000000;
+}
+
+*:not(#resultado) {
+	pointer-events: auto;
+}
